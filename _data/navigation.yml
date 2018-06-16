@@ -1,0 +1,23 @@
+- title: Introduction
+  url: /
+
+- title: Getting started
+  url: /getting-started.html
+
+- title: Guidelines
+  group: guidelines
+
+- title: Styles
+  group: styles
+
+- title: Components
+  group: components
+
+- title: Page templates
+  group: page-templates
+
+- title: Resources
+  url: /resources.html
+
+- title: Contribute
+  url: /contribute.html
