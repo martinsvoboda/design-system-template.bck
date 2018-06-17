@@ -31,7 +31,7 @@ layout: default
 						</header>
 
 						{% if variation.pattern %}
-							{% capture pattern_path %}_patterns/{{ variation.pattern }}.html{% endcapture %}
+							{% capture pattern_path %}_patterns/{{ variation.pattern }}{% endcapture %}
 							{% include pattern_live.html path=pattern_path %}
 						{% endif %}
 
@@ -71,7 +71,7 @@ layout: default
 
 						<div class="c-tabs__panel js-tabs-panel" id="html-{{ forloop.index }}">
 
-							{% capture pattern_path %}_patterns/{{ variation.pattern }}.html{% endcapture %}
+							{% capture pattern_path %}_patterns/{{ variation.pattern }}{% endcapture %}
 							{% include pattern_code.html path=pattern_path %}
 
 						</div><!--end c-tabs__panel-->

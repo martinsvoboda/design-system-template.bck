@@ -9,10 +9,10 @@ status: Complete
 variations:
 - title: Default
   description: Default buttons description ...
-  pattern: button/button-default
+  pattern: button/button-default.html
 - title: Primary
   description: Primary buttons description ...
-  pattern: button/button-primary
+  pattern: button/button-primary.html
 ---
 
 ## Usage

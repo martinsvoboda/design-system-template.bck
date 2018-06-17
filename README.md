@@ -2,9 +2,9 @@
 
 Design System Template is Jekyll theme and a boilerplate for creating and documenting your principles, style guides and patterns for your organization's design system. It provides just enough IA and hooks to get you going. As a bonus, I've provided links to helpful resources and inspiration to help you as you create your own custom design system. It is based on Brad Frost [Style Guide Guide](https://github.com/bradfrost/style-guide-guide/). The original code was cleaned and reworked, which leads to more straightforward maintenance of patterns and pages. Also, we speed up site generation.
 
-![Screenshot of Design System](screenshot.png)
-
 [See the demo here](https://martinsvoboda.github.io/design-system-template/)
+
+![Screenshot of Design System](screenshot.png)
 
 
 ## How it works
