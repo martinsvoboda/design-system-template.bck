@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    #PAGE HEADER
+\*------------------------------------*/
+/**
+ * 1) Container that consists of of a page header title and description
+ */
+
+/**
+ * Page header title
+ */
+.c-page-header__title {
+	margin-bottom: 0.2rem;
+}
+
+/**
+ * Page description
+ */
+.c-page-header__desc {
+    margin-bottom: 2rem;
+    font-size: $font-size-med-2;
+    color: $color-gray-50;
+    max-width: $l-max-width-narrow;
+}
+
+/**
+ * Force last paragraph of page header description to be inline so markdown flows into "Jump To Usage Guidelines Link"
+ */
+.c-page-header__desc {
+    p {
+        &:last-of-type {
+        display: inline;
+        }
+    }
+}
+
+/**
+* Page header icon
+* 1) Add height and width for the page header icon for the "Jump to Usage Guidelines Link"
+* 2) Added within the header__desc to cancel out text-passage styles;
+*/
+.c-page-header__icon {
+    .c-page-header__desc & {
+        height: 1rem; /* 1 */
+        width: 1rem; /* 1 */
+    }
+}

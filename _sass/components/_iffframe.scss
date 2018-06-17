@@ -1,0 +1,79 @@
+
+/*------------------------------------*\
+    #IFFFRAME
+\*------------------------------------*/
+
+/**
+ * 1) Iffframe creates a resizable component
+ */
+
+ .iffframe {
+    padding: 1rem 0.7rem 1rem 0;
+    width: 100%;
+    position: relative;
+    border: 1px solid $color-gray-27;
+    overflow: hidden;
+    height: auto;
+    background-color: $main_background_color;
+    margin-bottom: 2rem;
+  //transition: width 0.6s $anim-base-easing;
+}
+
+.iffframe__iframe {
+    width: 100%;
+    overflow: auto;
+    overflow-x: auto !important;
+}
+
+/**
+ * Iffframe handle
+ * 1) Hide resize handle for small screens
+ */
+.iffframe__handle {
+  display: none; /* 1 */
+    width: 0.7rem;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: col-resize;
+    background-color: $color-gray-04;
+    transition: background-color $anim-base-duration $anim-base-easing;
+
+    &:after {
+        content: "";
+        display: block;
+        height: 1rem;
+        width: 2px;
+        border-right: 1px solid #aaa;
+        border-left: 1px solid #aaa;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -0.5rem;
+        margin-left: -1px;
+    }
+
+  &:hover {
+    background: #e5e5e5;
+  }
+
+  &:active {
+    background: #cccccd;
+  }
+
+  @media all and (min-width: 40em) {
+    display: block;
+  }
+}
+
+// Failed attempt to get the icon grid looking better
+// li.icon-grid__item.c-well {
+// 	padding: 1rem !important;
+// 	border-color: $color-gray-10;
+// 	background-color: $color-gray-04;
+
+// 	h3 {
+// 		margin-top: 2rem;
+// 	}
+// }

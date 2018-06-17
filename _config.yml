@@ -28,7 +28,6 @@ github_url: "https://github.com/martinsvoboda/design-system-template"
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
 
 # Setup pattern collection
 collections:

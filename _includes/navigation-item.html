@@ -1,0 +1,30 @@
+<li class="c-primary-nav__item {% if page.group == include.group %}is-active{% endif %}">
+
+    <a class="c-primary-nav__link {% if include.group %}c-primary-nav__link--has-children js-nav-dropdown-trigger{% endif %} {% if include.url == page.url %}is-active is-current{% endif %} {% if include.group and page.group == include.group %}is-active{% endif %}" href="{% if include.group %}#{% else %}{{ include.url | prepend: site.baseurl}}{% endif %}">
+        <span class="c-primary-nav__text">{{ include.title }}</span>
+
+        {% if include.group %}
+        <svg class="c-icon c-primary-nav__icon" aria-hidden="true">
+            <use href="{{ "/assets/icons/icons.svg#chevron-right" | prepend: site.baseurl }}"></use>
+        </svg>
+        {% endif %}
+    </a><!--end c-primary-nav__link-->
+
+
+    {% if include.group %}
+        <ul class="c-primary-nav__sublist js-nav-dropdown {% if page.group == include.group %} is-active{% endif %}">
+            {% comment %} {% include navigation-item.html url='/test.html' label='' %} {% endcomment %}
+
+            {% for my_subpage in site.pages %}
+                {% comment %} Test, {{ my_subpage.url }}, {{ my_subpage.group }}<br> {% endcomment %}
+                {% if my_subpage.group == include.group %}
+                    <li class="c-primary-nav__item {% if page.group == include.group %}is-active{% endif %}">
+                        <a class="c-primary-nav__link {% if my_subpage.url == page.url %}is-active is-current{% endif %}" href="{{ my_subpage.url | prepend: site.baseurl }}">
+                            <span class="c-primary-nav__text">{{ my_subpage.title }}</span>
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>

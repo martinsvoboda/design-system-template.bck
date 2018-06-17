@@ -1,0 +1,103 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+/*------------------------------------*\
+   #TABLE OF CONTENTS
+\*------------------------------------*/
+/**
+* ABSTRACTS..............................Declarations of Sass variables & mixins
+* BASE...................................Default element styles
+* .....Body
+* .....Links
+* .....Headings
+* .....Forms
+* .....Defaults
+* LAYOUT.................................Layout-specific styles
+* COMPONENTS.............................Component styles
+* UTILITIES..............................Utility classes
+*/
+
+@charset "utf-8";
+
+/*------------------------------------*\
+   #ABSTRACTS
+\*------------------------------------*/
+
+/**
+ * Brand Colors customizable in jekyll config
+ * 1) Main identifiable colors involved in creating the UI
+ *    Feel free to add your brand's color palette here.
+ */
+
+ $navigation_background_color: {{ site.branding.navigation_background_color | default: '#eee' }};
+ $navigation_link_color: {{ site.branding.navigation_link_color | default: '#444' }};
+ $navigation_link_color_hover: {{ site.branding.navigation_link_color_hover | default: 'gray' }};
+ $main_background_color: {{ site.branding.main_background_color | default: '#fff' }};
+
+@import "abstracts/variables";
+@import "abstracts/variables_custom";
+@import "abstracts/mixins";
+
+
+/*------------------------------------*\
+   #BASE
+\*------------------------------------*/
+@import "base/body";
+@import "base/buttons";
+@import "base/forms";
+@import "base/headings";
+@import "base/links";
+@import "base/lists";
+@import "base/main";
+@import "base/media";
+@import "base/reset";
+@import "base/tables";
+@import "base/text";
+
+
+
+
+
+/*------------------------------------*\
+   #LAYOUT
+\*------------------------------------*/
+@import "layout/layout";
+
+
+
+
+
+/*------------------------------------*\
+   #COMPONENTS
+\*------------------------------------*/
+@import "components/badges";
+@import "components/breadcrumbs";
+@import "components/buttons";
+@import "components/button-group";
+@import "components/card";
+@import "components/code"; // ---
+@import "components/footer-nav";
+@import "components/footer";
+@import "components/header";
+@import "components/hero";
+@import "components/logo";
+@import "components/icon";
+@import "components/iffframe";
+@import "components/page-header";
+@import "components/primary-nav";
+@import "components/section";
+@import "components/table";
+@import "components/tabs";
+@import "components/text-passage";
+@import "components/tile";
+
+
+
+
+
+/*------------------------------------*\
+   #UTILITIES
+\*------------------------------------*/
+@import "utilities/visibility";
+@import "utilities/display";

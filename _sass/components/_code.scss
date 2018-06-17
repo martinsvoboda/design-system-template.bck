@@ -1,0 +1,58 @@
+/*------------------------------------*\
+    #CODE
+\*------------------------------------*/
+
+/**
+ * 1) Override some Prism defaults
+ * 2) Fixed width button for showing and hiding code
+ * 3) Change background color
+ * 4) Update the code color to have Exxon colors
+ */
+code[class*="language-"], pre[class*="language-"] {
+    tab-size: 2;
+}
+
+.pattern-code {
+    position: relative;
+    margin-top: 2rem;
+}
+
+/**
+* Applied to pre element
+*/
+.pattern-code-block {
+    margin-top: 0;
+    max-height: 25rem;
+    overflow-y: auto;
+
+    .is-expanded & {
+        max-height: none;
+    }
+}
+
+.pattern-code-copy-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* 3 */
+pre[class*="language-"] {
+    background-color: $color-gray-04;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+    text-shadow: none;
+}
+
+/**
+* Push the button up to be closer to the code-block in the show-more block
+*/
+.c-btn {
+    .show-more & {
+        position: relative;
+        bottom: 2rem;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,13 @@
+<nav class="c-primary-nav" role="navigation">
+
+	<ul class="c-primary-nav__list c-primary-nav__list--flush js-nav-panel" role="tablist" aria-multiselectable="true">
+		{% for item in site.data.navigation %}
+			{% if item.group %}
+				{% include navigation-item.html group=item.group title=item.title %}
+			{% else %}
+				{% include navigation-item.html url=item.url title=item.title %}
+			{% endif %}
+		{% endfor %}
+	</ul>
+
+</nav><!-- end c-nav -->	
